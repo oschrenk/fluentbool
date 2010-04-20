@@ -1,0 +1,9 @@
+h1. README
+
+This project was a training exercise for creating fluent interfaces and using object oriented paradigm to write boolean expressions in a more natural approach.
+
+You create boolean filters that evaluate a specific type (using generics) and decide whether it should be accepted within a specific context. It offers a more generic approach as java.io.FileFilter, offering to evaluate any type.
+
+With this fluent interface you create expression like this (an example of an implementation of the XOR expression):
+
+bc. boolFilter = expFilter.start(falseFilter).and().not(falseFilter).or().not(falseFilter).and(falseFilter).build();
